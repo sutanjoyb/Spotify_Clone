@@ -1,87 +1,205 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify - Your favorite music is here!</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
-</head>
-<body>
-    
-    <nav>
-        <ul>
-            <li class="brand"><img src="logo.png" alt="Spotify">Spotify</li>
-            <li>Home</li>
-            <li>About</li>
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <i class="fa-brands fa-spotify spotify-icon"></i>
+        <span>Spotify</span>
+      </div>
+      <ul class="nav-links">
+        <li class="active">
+          <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-book"></i> Your Library</a>
+        </li>
+      </ul>
     </nav>
-    
-    <div class="container">
-        <div class="songList">
-            <h1>Best of NCS - No Copyright Sounds</h1>
-            <div class="songItemContainer">
-                <div class="songItem">
-                    <img src="cover.jpg" alt="1">
-                    <span>Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i class="far fa-play-circle"></i></span></span>
-                </div>
-                <div class="songItem">
-                    <img src="cover.jpg" alt="1">
-                    <span>Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i class="far fa-play-circle"></i></span></span>
-                </div>
-                <div class="songItem">
-                    <img src="cover.jpg" alt="1">
-                    <span>Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i class="far fa-play-circle"></i></span></span>
-                </div>
-                <div class="songItem">
-                    <img src="cover.jpg" alt="1">
-                    <span>Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i class="far fa-play-circle"></i></span></span>
-                </div>
-                <div class="songItem">
-                    <img src="cover.jpg" alt="1">
-                    <span>Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i class="far fa-play-circle"></i></span></span>
-                </div>
-                <div class="songItem">
-                    <img src="cover.jpg" alt="1">
-                    <span>Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i class="far fa-play-circle"></i></span></span>
-                </div>
-                <div class="songItem">
-                    <img src="cover.jpg" alt="1">
-                    <span>Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i class="far fa-play-circle"></i></span></span>
-                </div>
-                <div class="songItem">
-                    <img src="cover.jpg" alt="1">
-                    <span>Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i class="far fa-play-circle"></i></span></span>
-                </div>
-                <div class="songItem">
-                    <img src="cover.jpg" alt="1">
-                    <span>Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i class="far fa-play-circle"></i></span></span>
-                </div>
-            </div>
-        </div>
-        <div class="songBanner"></div>
-    </div>
 
-    <div class="bottom">
-        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
-        <div class="icons">
-             <i class="fas fa-3x fa-step-backward"></i>
-             <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
-             <i class="fas fa-3x fa-step-forward"></i>
+    <main class="main-container">
+      <header class="playlist-header">
+        <img
+          src="https://picsum.photos/seed/ncs/200"
+          alt="Playlist Cover"
+          class="playlist-img"
+        />
+        <div class="playlist-details">
+          <span class="type-badge">PLAYLIST</span>
+          <h1>Best of NCS - No Copyright Sounds</h1>
+          <p>
+            Trending non-copyrighted electronic, house, and gaming music tracks.
+          </p>
+          <div class="playlist-meta">
+            <span class="brand-subtext">Spotify</span> • 9 songs, about 32 min
+          </div>
         </div>
-        <div class="songInfo">
-            <img src="playing.gif" width="42px" alt="" id="gif">Let me Love You - Justin Beiber
+      </header>
+
+      <section class="song-list-section">
+        <div class="song-table-header">
+          <span class="th-index">#</span>
+          <span class="th-title">TITLE</span>
+          <span class="th-album">ALBUM</span>
+          <span class="th-time"><i class="fa-regular fa-clock"></i></span>
         </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+
+        <div class="songItemContainer">
+          <div class="songItem">
+            <div class="song-index-col">
+              <span class="index-num">1</span>
+              <i class="fa-solid fa-play row-play-icon"></i>
+            </div>
+            <div class="song-main">
+              <img src="https://picsum.photos/seed/song1/48" alt="Cover" />
+              <div class="song-info">
+                <span class="song-title">Let Me Love You</span>
+                <span class="song-artist">DJ Snake, Justin Bieber</span>
+              </div>
+            </div>
+            <span class="song-album">Encore</span>
+            <div class="song-time-col">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <span class="duration">03:25</span>
+            </div>
+          </div>
+
+          <div class="songItem">
+            <div class="song-index-col">
+              <span class="index-num">2</span>
+              <i class="fa-solid fa-play row-play-icon"></i>
+            </div>
+            <div class="song-main">
+              <img src="https://picsum.photos/seed/song2/48" alt="Cover" />
+              <div class="song-info">
+                <span class="song-title">Faded</span>
+                <span class="song-artist">Alan Walker</span>
+              </div>
+            </div>
+            <span class="song-album">Different World</span>
+            <div class="song-time-col">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <span class="duration">03:32</span>
+            </div>
+          </div>
+
+          <div class="songItem">
+            <div class="song-index-col">
+              <span class="index-num">3</span>
+              <i class="fa-solid fa-play row-play-icon"></i>
+            </div>
+            <div class="song-main">
+              <img src="https://picsum.photos/seed/song3/48" alt="Cover" />
+              <div class="song-info">
+                <span class="song-title">Spectre</span>
+                <span class="song-artist">Alan Walker</span>
+              </div>
+            </div>
+            <span class="song-album">NCS Release</span>
+            <div class="song-time-col">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <span class="duration">03:50</span>
+            </div>
+          </div>
+
+          <div class="songItem">
+            <div class="song-index-col">
+              <span class="index-num">4</span>
+              <i class="fa-solid fa-play row-play-icon"></i>
+            </div>
+            <div class="song-main">
+              <img src="https://picsum.photos/seed/song4/48" alt="Cover" />
+              <div class="song-info">
+                <span class="song-title">Heroes Tonight</span>
+                <span class="song-artist">Janji, Johnning</span>
+              </div>
+            </div>
+            <span class="song-album">NCS: Uplifting</span>
+            <div class="song-time-col">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <span class="duration">03:28</span>
+            </div>
+          </div>
+
+          <div class="songItem">
+            <div class="song-index-col">
+              <span class="index-num">5</span>
+              <i class="fa-solid fa-play row-play-icon"></i>
+            </div>
+            <div class="song-main">
+              <img src="https://picsum.photos/seed/song5/48" alt="Cover" />
+              <div class="song-info">
+                <span class="song-title">Invincible</span>
+                <span class="song-artist">DEAF KEV</span>
+              </div>
+            </div>
+            <span class="song-album">NCS: Infinity</span>
+            <div class="song-time-col">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <span class="duration">04:33</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bottom-player">
+      <div class="now-playing">
+        <img src="https://picsum.photos/seed/song1/48" alt="Current cover" />
+        <div class="track-details">
+          <span class="track-name">Let Me Love You</span>
+          <span class="track-artist">DJ Snake, Justin Bieber</span>
+        </div>
+        <i class="fa-regular fa-heart"></i>
+      </div>
+
+      <div class="player-controls">
+        <div class="control-buttons">
+          <button class="control-btn">
+            <i class="fa-solid fa-shuffle"></i>
+          </button>
+          <button class="control-btn">
+            <i class="fa-solid fa-backward-step"></i>
+          </button>
+          <button class="control-btn play-btn">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button class="control-btn">
+            <i class="fa-solid fa-forward-step"></i>
+          </button>
+          <button class="control-btn">
+            <i class="fa-solid fa-repeat"></i>
+          </button>
+        </div>
+        <div class="progress-bar-wrapper">
+          <span class="time-label">1:23</span>
+          <input type="range" id="myProgressBar" min="0" value="40" max="100" />
+          <span class="time-label">3:25</span>
+        </div>
+      </div>
+
+      <div class="volume-controls">
+        <i class="fa-solid fa-volume-high"></i>
+        <input
+          type="range"
+          class="volume-slider"
+          min="0"
+          value="70"
+          max="100"
+        />
+      </div>
+    </footer>
+  </body>
 </html>
